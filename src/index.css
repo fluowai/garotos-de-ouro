@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Playfair+Display:wght@700;900&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+  
+  --color-gaucho-red: #FF8C00;
+  --color-gaucho-gold: #FFD700;
+  --color-gaucho-dark: #121212;
+  --color-gaucho-cream: #FFFFFF;
+}
+
+@layer base {
+  body {
+    @apply bg-gaucho-dark text-white font-sans antialiased;
+  }
+}
+
+.glass-morphism {
+  @apply bg-white/10 backdrop-blur-md border border-white/20;
+}
+
+.text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gaucho-gold to-orange-500;
+}
